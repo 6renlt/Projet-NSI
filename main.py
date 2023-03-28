@@ -3,8 +3,11 @@ import pygame
 from pygame.locals import *
 pygame.init()
 
+largeur=800
+longueur=800
+
 def jeu_beret():
-    screen = display.set_mode((1920,1080))
+    screen = display.set_mode((largeur,longueur))
     
     
     while True:
@@ -12,7 +15,9 @@ def jeu_beret():
             if event.type == QUIT:
                 pygame.quit ()
 
-
+                
+                
+            
 def map():
 
 
