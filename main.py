@@ -21,11 +21,11 @@ def personnages():
 
 def temps():
     
-    
-def fin():
-    
-    
+     
 def objet():
+
+    
+def fin() :
     
     
     
