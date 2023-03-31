@@ -42,6 +42,11 @@ def personnages():
     
 
 def temps():
+    screen = display.set_mode((largeur,longueur))
+    timer_interval = 500 # 0.5 seconds
+    timer_event = pygame.USEREVENT + 1
+    pygame.time.set_timer(timer_event , timer_interval)
+
     
      
 def objet():
