@@ -14,7 +14,8 @@ def jeu_beret():
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit ()
-
+    
+    if timer==0:
                 
 
     
