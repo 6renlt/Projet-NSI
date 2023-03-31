@@ -48,7 +48,7 @@ def objet():
 
     
 def fin() :
-    screen = pygame.display.set_mode((800, 800))
+    screen = pygame.display.set_mode((largeur, longueur))
     police = pygame.font.SysFont("ubuntu",100)
     image_texte = police.render("FIN",1,(255,255,255))
     screen.blit(image_texte, (300,350))
