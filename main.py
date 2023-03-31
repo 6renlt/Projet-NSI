@@ -6,6 +6,10 @@ pygame.init()
 largeur=800
 longueur=800
 
+pygame.mixer.music.load('')
+pygame.mixer.music.play()
+Sound.play(loops=1, maxtime=0, fade_ms=0)
+
 def jeu_beret():
     screen = display.set_mode((largeur,longueur))
     
