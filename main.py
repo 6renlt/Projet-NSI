@@ -56,7 +56,9 @@ def temps():
                    pygame.
      
 def objet():
-
+    foulard = pygame.image.load("/home/eleve/Documents/Première NSI/Pygame jeu/Foulard.png")
+    foulard = pygame.transform.scale(foulard, (31, 31))
+    rect1 = foulard.get_rect()
     
 def fin() :
     screen = pygame.display.set_mode((largeur, longueur))
