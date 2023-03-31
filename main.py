@@ -1,10 +1,15 @@
 # Ceci est le fichier principal
 import pygame
 from pygame.locals import *
+
 pygame.init()
+clock = pygame.time.Clock()
+current_time = pygame.time.get_ticks()
+button_press_time = 0
 
 largeur=800
 longueur=800
+
 
 pygame.mixer.music.load('')
 pygame.mixer.music.play()
@@ -47,12 +52,8 @@ def personnages():
     
 
 def temps():
-    screen = display.set_mode((largeur,longueur))
-    timer_interval = 500 # 0.5 seconds
-    timer_event = pygame.USEREVENT + 1
-    pygame.time.set_timer(timer_event , timer_interval)
-
-    
+    if event.key == pygame.SPACE:
+                   pygame.
      
 def objet():
 
