@@ -16,8 +16,6 @@ def jeu_beret():
                 pygame.quit ()
 
                 
-     if temps ==  false:
-        return fin()
 
     
 def map():
