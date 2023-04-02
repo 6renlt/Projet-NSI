@@ -1,11 +1,10 @@
 # Ceci est le fichier principal
 import pygame
 from pygame.locals import *
-
 pygame.init()
+
 clock = pygame.time.Clock()
-current_time = pygame.time.get_ticks()
-button_press_time = 0
+current_time = 0
 
 largeur=800
 longueur=800
@@ -23,8 +22,12 @@ def jeu_beret():
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit ()
+                
+        pygame.display.flip()
+        clock.tick(60)
+        current_time = pygame.time.get_ticks()
     
-    if timer==0:
+    
                 
 
     
@@ -51,14 +54,13 @@ def personnages():
                     personnage_test.move_ip((0,5))
     
 
-def temps():
-    if event.key == pygame.SPACE:
-                   pygame.
-     
+def timmer():
+def timer(time_start, t):
+    print((time()-time_start))
+    return ((time()-time_start)>=t)
+
 def objet():
-    foulard = pygame.image.load("/home/eleve/Documents/Première NSI/Pygame jeu/Foulard.png")
-    foulard = pygame.transform.scale(foulard, (31, 31))
-    rect1 = foulard.get_rect()
+    
     
 def fin() :
     screen = pygame.display.set_mode((largeur, longueur))
