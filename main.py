@@ -6,8 +6,8 @@ pygame.init()
 clock = pygame.time.Clock()
 current_time = 0
 
-largeur=800
-longueur=465
+longueur=800
+hauteur=465
 
 
 pygame.mixer.music.load('')
@@ -15,7 +15,7 @@ pygame.mixer.music.play()
 Sound.play(loops=1, maxtime=0, fade_ms=0)
 
 def jeu_beret():
-    ecran = pygame.display.set_mode((800, 465))
+    ecran = pygame.display.set_mode((longueur, hauteur))
     image1 = pygame.image.load("photo map.jpg").convert_alpha()
     ecran.blit(image1, (0,0))
     
@@ -63,7 +63,7 @@ def objet():
     
     
 def fin() :
-    screen = pygame.display.set_mode((largeur, longueur))
+    screen = pygame.display.set_mode((longueur, hauteur))
     image2 = pygame.image.load('game_over.jpeg')
     image2 = image.convert()
     screen. blit(image, (82,50))
