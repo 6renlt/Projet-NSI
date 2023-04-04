@@ -10,9 +10,7 @@ longueur=800
 hauteur=465
 
 
-pygame.mixer.music.load('')
-pygame.mixer.music.play()
-Sound.play(loops=1, maxtime=0, fade_ms=0)
+
 
 def jeu_beret():
     ecran = pygame.display.set_mode((longueur, hauteur))
@@ -57,6 +55,13 @@ def temps():
         else :
             chrono = True
             fin()
+            
+ 
+
+def musique():
+    pygame.mixer.music.load('')
+    pygame.mixer.music.play()
+    Sound.play(loops=1, maxtime=0, fade_ms=0)
 
 
 def objet():
