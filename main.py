@@ -64,11 +64,10 @@ def objet():
     
 def fin() :
     screen = pygame.display.set_mode((largeur, longueur))
-    police = pygame.font.SysFont("ubuntu",100)
-    image_texte = police.render("FIN",1,(255,255,255))
-    screen.blit(image_texte, (300,350))
+    image = image = pygame.image.load('game_over.jpeg')
+    image = image.convert()
+    screen. blit(image, (82,170))
     pygame.display.flip()
-    
     
     
     
