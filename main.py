@@ -7,7 +7,7 @@ clock = pygame.time.Clock()
 current_time = 0
 
 largeur=800
-longueur=480
+longueur=465
 
 
 pygame.mixer.music.load('')
@@ -15,21 +15,17 @@ pygame.mixer.music.play()
 Sound.play(loops=1, maxtime=0, fade_ms=0)
 
 def jeu_beret():
-    screen = display.set_mode((largeur,longueur))
-    
+    ecran = pygame.display.set_mode((800, 465))
+    image1 = pygame.image.load("photo map.jpg").convert_alpha()
+    ecran.blit(image1, (0,0))
     
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit ()
-                
-    
-    
-                
-
-    
-def map():
-
+            if event.type == pygame.KEYDOWN:
+                continuer = False
+        pygame.display.flip()
 
 def personnages():
     personnage_test = pygame.Rect((360,240), (32,32))
