@@ -23,9 +23,6 @@ def jeu_beret():
             if event.type == QUIT:
                 pygame.quit ()
                 
-        pygame.display.flip()
-        clock.tick(60)
-        current_time = pygame.time.get_ticks()
     
     
                 
@@ -54,10 +51,17 @@ def personnages():
                     personnage_test.move_ip((0,5))
     
 
-def timmer():
-def timer(time_start, t):
-    print((time()-time_start))
-    return ((time()-time_start)>=t)
+def temps(): 
+    chrono = False
+    start_ticks=pygame.time.get_ticks()#lance le chrono
+    while not chrono :
+        seconds=(pygame.time.get_ticks()-start_ticks)/1000
+        if seconds<10:
+            print(seconds) #print how many seconds
+        else :
+            chrono = True
+            fin()
+
 
 def objet():
     
