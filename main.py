@@ -57,7 +57,7 @@ def temps():
     while not chrono :
         seconds=(pygame.time.get_ticks()-start_ticks)/1000
         if seconds<10:
-            print(seconds) #print how many seconds
+            print(seconds)
         else :
             chrono = True
             fin()
