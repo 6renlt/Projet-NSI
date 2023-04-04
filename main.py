@@ -70,7 +70,7 @@ def fin() :
     screen = pygame.display.set_mode((largeur, longueur))
     image = image = pygame.image.load('game_over.jpeg')
     image = image.convert()
-    screen. blit(image, (82,170))
+    screen. blit(image, (82,50))
     pygame.display.flip()
     
     
