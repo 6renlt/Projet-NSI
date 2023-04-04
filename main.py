@@ -7,7 +7,7 @@ clock = pygame.time.Clock()
 current_time = 0
 
 largeur=800
-longueur=800
+longueur=480
 
 
 pygame.mixer.music.load('')
