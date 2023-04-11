@@ -15,9 +15,9 @@ hauteur=465
 def jeu_beret():                                                                     #sert à importer une image (ici la map)
     
     
-    ecran = pygame.display.set_mode((longueur, hauteur))
+    screen = pygame.display.set_mode((longueur, hauteur))
     image1 = pygame.image.load("map easy 1.jpg").convert_alpha()
-    ecran.blit(image1, (0,0))
+    screen.blit(image1, (0,0))
     
     
     interface()
