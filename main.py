@@ -30,6 +30,7 @@ def personnages():
     personnage_test = pygame.Rect((360,240), (32,32))
     pygame.key.set_repeat(1,20)
     
+    #permet le déplacements du personnages dans differentes directions
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
