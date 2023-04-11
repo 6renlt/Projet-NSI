@@ -67,7 +67,7 @@ def musique():
 #creation d'une fonction qui permet de créer l'objet qui sera au mileux de la map
 def objet():
     
-#affiche une image avec écrit game over lors de la fin du temps a partie / lorsque le joueur a perdu    
+#affiche une image avec écrit game over lors de la fin du temps a partie / lorsque le joueur à perdu    
 def fin() :
     screen = pygame.display.set_mode((longueur, hauteur))
     image2 = pygame.image.load('game_over.jpeg')
