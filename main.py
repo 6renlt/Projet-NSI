@@ -11,7 +11,7 @@ hauteur=465
 
 
 
-
+#sert à importer une image (ici la map)
 def jeu_beret():
     ecran = pygame.display.set_mode((longueur, hauteur))
     image1 = pygame.image.load("map easy 1.jpg").convert_alpha()
@@ -24,7 +24,8 @@ def jeu_beret():
             if event.type == pygame.KEYDOWN:
                 continuer = False
         pygame.display.flip()
-
+        
+#sert a definir la taille du personnage et ses déplacements sur la map
 def personnages():
     personnage_test = pygame.Rect((360,240), (32,32))
     pygame.key.set_repeat(1,20)
@@ -44,7 +45,7 @@ def personnages():
                 elif event.key == pygame.K_DOWN:
                     personnage_test.move_ip((0,5))
     
-
+#création d'un minuteur/chronomètre
 def temps(): 
     chrono = False
     start_ticks=pygame.time.get_ticks()#lance le chrono
@@ -57,7 +58,7 @@ def temps():
             fin()
             
  
-
+#création d'une fonction de musique qui se lace lors du lancement de la partie
 def musique():
     pygame.mixer.music.load('')
     pygame.mixer.music.play()
@@ -66,7 +67,7 @@ def musique():
 
 def objet():
     
-    
+#affiche une image avec écrit game over lors de la fin du temps a partie / lorsque le joueur a perdu    
 def fin() :
     screen = pygame.display.set_mode((longueur, hauteur))
     image2 = pygame.image.load('game_over.jpeg')
