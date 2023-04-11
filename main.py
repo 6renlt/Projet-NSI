@@ -81,37 +81,4 @@ def fin() :
     
     
     
-def Elias():
-    import pygame
-    from pygame.locals import *
-pygame.init()
-
-longueur=805
-hauteur=485
-ecran = pygame.display.set_mode((longueur, hauteur))
-image1 = pygame.image.load("photo_map.jpg")
-image1 = image1.convert()
-personnage_test = pygame.image.load("Fred.png")
-personnage_test = pygame.transform.scale(personnage_test, (30,30))
-rect1 = personnage_test.get_rect()
-pygame.key.set_repeat(1,20)
-ecran.blit(image1, (2.5,2.5))
-
-
-while True:
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
-                rect1.move_ip((5,0))
-            elif event.key == pygame.K_UP:
-                rect1.move_ip((0,-5))
-            elif event.key == pygame.K_LEFT:
-                rect1.move_ip((-5,0))
-            elif event.key == pygame.K_DOWN:
-                rect1.move_ip((0,5))
-    ecran.blit(personnage_test, (0,0))
-    pygame.display.flip()
-    
     
