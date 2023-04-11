@@ -23,7 +23,9 @@ def jeu_beret():
                 pygame.quit ()
             if event.type == pygame.KEYDOWN:
                 continuer = False
-        pygame.display.flip()
+         interface()  
+         pygame.display.flip()
+        
         
 #sert a definir la taille du personnage et ses déplacements sur la map
 def personnages():
