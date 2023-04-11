@@ -14,7 +14,7 @@ hauteur=465
 
 def jeu_beret():
     ecran = pygame.display.set_mode((longueur, hauteur))
-    image1 = pygame.image.load("photo map.jpg").convert_alpha()
+    image1 = pygame.image.load("map easy 1.jpg").convert_alpha()
     ecran.blit(image1, (0,0))
     
     while True:
