@@ -11,8 +11,8 @@ hauteur=465
 
 
 
-#sert à importer une image (ici la map)
-def jeu_beret():
+
+def jeu_beret():                                                                     #sert à importer une image (ici la map)
     
     
     ecran = pygame.display.set_mode((longueur, hauteur))
@@ -38,8 +38,8 @@ def personnages():                                                              
     personnage_test = pygame.Rect((360,240), (32,32))
     pygame.key.set_repeat(1,20)
     
-    #permet le déplacements du personnages dans differentes directions
-    while True:
+    
+    while True:                                                                     #permet le déplacements du personnages dans differentes directions
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -54,8 +54,7 @@ def personnages():                                                              
                 elif event.key == pygame.K_DOWN:
                     personnage_test.move_ip((0,5))
     
-#création d'un minuteur/chronomètre
-def temps(): 
+def temps():                                                                        #création d'un minuteur/chronomètre
     chrono = False
     start_ticks=pygame.time.get_ticks()#lance le chrono
     while not chrono :
@@ -67,8 +66,8 @@ def temps():
             fin()
             
  
-#création d'une fonction de musique qui se lace lors du lancement de la partie
-def musique():
+
+def musique():                                                                      #création d'une fonction de musique qui se lace lors du lancement de la partie
     pygame.mixer.music.load('')
     pygame.mixer.music.play()
     Sound.play(loops=1, maxtime=0, fade_ms=0)
@@ -81,9 +80,8 @@ def interface():
     if event.key == pygame.K_SPACE:
         
         
-    
-#affiche une image avec écrit game over lors de la fin du temps a partie / lorsque le joueur à perdu    
-def fin() :
+   
+def fin() :                                                                         #affiche une image avec écrit game over lors de la fin du temps a partie / lorsque le joueur à perdu    
     screen = pygame.display.set_mode((longueur, hauteur))
     image2 = pygame.image.load('game_over.jpeg')
     image2 = image.convert()
