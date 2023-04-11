@@ -90,5 +90,113 @@ def fin() :                                                                     
     
     
     
+    import pygame
+from pygame.locals import *
+pygame.init()
+
+ecran = pygame.display.set_mode((805,485))
+
+fond = pygame.image.load('photo map.jpg')
+
+fond = fond.convert()
+
+personnage_test = pygame.image.load('fred.png')
+
+personnage_test = pygame.transform.scale(personnage_test, (30,30))
+
+rect1 = personnage_test.get_rect()
+
+pygame.key.set_repeat(1,20)
+
+foulard = pygame.image.load('ImageDuBeret.png')
+
+foulard = pygame.transform.scale(foulard, (35,35))
+
+jouer = True
+
+ecran.blit(personnage_test, (20,20))
+
+while jouer:
+    for events in pygame.event.get():
+        if events.type == QUIT:
+            jouer=False
+            quit()
+        elif events.type == pygame.KEYDOWN:
+            if events.key == pygame.K_RIGHT:
+                rect1.move_ip((2.5,0))
+            elif events.key == pygame.K_UP:
+                rect1.move_ip((0,-2.5))
+            elif events.key == pygame.K_LEFT:
+                rect1.move_ip((-2.5,0))
+            elif events.key == pygame.K_DOWN:
+                rect1.move_ip((0,2.5))
+                
+            
+    ecran.blit(fond, (2.5,2.5))
     
+    ecran.blit(personnage_test, rect1)
+    
+    ecran.blit(foulard, (430, 200))
+    
+    pygame.display.flip()
+        
+        
+import pygame
+from pygame.locals import *
+pygame.init()
+
+ecran = pygame.display.set_mode((805,485))
+
+fond = pygame.image.load('photo map.jpg')
+
+fond = fond.convert()
+
+personnage_test = pygame.image.load('fred.png')
+
+personnage_test = pygame.transform.scale(personnage_test, (30,30))
+
+rect1 = personnage_test.get_rect()
+
+pygame.key.set_repeat(1,20)
+
+foulard = pygame.image.load('ImageDuBeret.png')
+
+foulard = pygame.transform.scale(foulard, (35,35))
+
+jouer = True
+
+ecran.blit(personnage_test, (20,20))
+
+while jouer:
+    for events in pygame.event.get():
+        if events.type == QUIT:
+            jouer=False
+            quit()
+        elif events.type == pygame.KEYDOWN:
+            if events.key == pygame.K_RIGHT:
+                rect1.move_ip((2.5,0))
+            elif events.key == pygame.K_UP:
+                rect1.move_ip((0,-2.5))
+            elif events.key == pygame.K_LEFT:
+                rect1.move_ip((-2.5,0))
+            elif events.key == pygame.K_DOWN:
+                rect1.move_ip((0,2.5))
+                
+            
+    ecran.blit(fond, (2.5,2.5))
+    
+    ecran.blit(personnage_test, rect1)
+    
+    ecran.blit(foulard, (430, 200))
+    
+    pygame.display.flip()
+        
+
+       
+
+
+
+       
+
+
     
