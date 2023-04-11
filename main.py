@@ -64,7 +64,7 @@ def musique():
     pygame.mixer.music.play()
     Sound.play(loops=1, maxtime=0, fade_ms=0)
 
-
+#creation d'une fonction qui permet de créer l'objet qui sera au mileux de la map
 def objet():
     
 #affiche une image avec écrit game over lors de la fin du temps a partie / lorsque le joueur a perdu    
