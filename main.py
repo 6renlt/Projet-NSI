@@ -13,22 +13,28 @@ hauteur=465
 
 #sert à importer une image (ici la map)
 def jeu_beret():
+    
+    
     ecran = pygame.display.set_mode((longueur, hauteur))
     image1 = pygame.image.load("map easy 1.jpg").convert_alpha()
     ecran.blit(image1, (0,0))
+    
+    
+    interface()
+    musique()
+    
     
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit ()
             if event.type == pygame.KEYDOWN:
-                continuer = False
-         interface()  
-         pygame.display.flip()
+                continuer = False  
+        pygame.display.flip()
         
         
-#sert a definir la taille du personnage et ses déplacements sur la map
-def personnages():
+
+def personnages():                                                                  #sert a definir la taille du personnage et ses déplacements sur la map
     personnage_test = pygame.Rect((360,240), (32,32))
     pygame.key.set_repeat(1,20)
     
@@ -66,9 +72,15 @@ def musique():
     pygame.mixer.music.load('')
     pygame.mixer.music.play()
     Sound.play(loops=1, maxtime=0, fade_ms=0)
-
-#creation d'une fonction qui permet de créer l'objet qui sera au mileux de la map
-def objet():
+    
+    
+def interface():
+    police = pygame.font.SysFont("ubuntu",17)
+    label = police.render('Bienvenue dans ',True,(0,0,0))
+    cran.blit(label,(0,0))     
+    if event.key == pygame.K_SPACE:
+        
+        
     
 #affiche une image avec écrit game over lors de la fin du temps a partie / lorsque le joueur à perdu    
 def fin() :
