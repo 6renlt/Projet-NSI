@@ -4,42 +4,45 @@ from pygame.locals import *
 pygame.init()
 
 clock = pygame.time.Clock()
+
 current_time = 0
 
 longueur=800
+
 hauteur=465
 
-
-
-
-def jeu_beret():                                                                     #sert à importer une image (ici la map)
+def jeu_beret():                                                                     
+        
+    screen = pygame.display.set_mode((longueur, hauteur))           # charge la fenêtre de hauteur 465 et de longeur 800
     
+    image1 = pygame.image.load("map easy 1.jpg")                    # sert à importer une image (ici la map)
     
-    screen = pygame.display.set_mode((longueur, hauteur))
-    image1 = pygame.image.load("map easy 1.jpg").convert_alpha()
-    screen.blit(image1, (0,0))
+    screen = screen.convert()                                       # convertit l'image
     
-    
+    screen.blit(image1, (0,0))                                                                           
+        
     interface()
+    
     musique()
-    
-    
+        
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit ()
             if event.type == pygame.KEYDOWN:
-                continuer = False  
+                continuer = False 
+                
         pygame.display.flip()
         
         
 
-def personnages():                                                                  #sert a definir la taille du personnage et ses déplacements sur la map
+def personnages():                                                              #sert a definir la taille du personnage et ses déplacements sur la map
+    
     personnage_test = pygame.Rect((360,240), (32,32))
+    
     pygame.key.set_repeat(1,20)
-    
-    
-    while True:                                                                     #permet le déplacements du personnages dans differentes directions
+        
+    while True:                                                                     # permet le déplacements du personnages dans differentes directions
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -54,7 +57,7 @@ def personnages():                                                              
                 elif event.key == pygame.K_DOWN:
                     personnage_test.move_ip((0,5))
     
-def temps():                                                                        #création d'un minuteur/chronomètre
+def temps():                                                                        # création d'un minuteur/chronomètre
     chrono = False
     start_ticks=pygame.time.get_ticks()#lance le chrono
     while not chrono :
@@ -67,13 +70,13 @@ def temps():                                                                    
             
  
 
-def musique():                                                                      #création d'une fonction de musique qui se lace lors du lancement de la partie
+def musique():                                                                      #création d'une fonction de musique qui se lance lors du lancement de la partie
     pygame.mixer.music.load('')
     pygame.mixer.music.play()
     Sound.play(loops=1, maxtime=0, fade_ms=0)
     
     
-def interface():
+def interface():                                                                    # interface de bienvenue avec l'explication du but du jeu et des règles
     police = pygame.font.SysFont("ubuntu",17)
     label = police.render('Bienvenue dans ',True,(0,0,0))
     cran.blit(label,(0,0))     
@@ -87,116 +90,3 @@ def fin() :                                                                     
     image2 = image.convert()
     screen. blit(image, (82,50))
     pygame.display.flip()
-    
-    
-    
-    import pygame
-from pygame.locals import *
-pygame.init()
-
-ecran = pygame.display.set_mode((805,485))
-
-fond = pygame.image.load('photo map.jpg')
-
-fond = fond.convert()
-
-personnage_test = pygame.image.load('fred.png')
-
-personnage_test = pygame.transform.scale(personnage_test, (30,30))
-
-rect1 = personnage_test.get_rect()
-
-pygame.key.set_repeat(1,20)
-
-foulard = pygame.image.load('ImageDuBeret.png')
-
-foulard = pygame.transform.scale(foulard, (35,35))
-
-jouer = True
-
-ecran.blit(personnage_test, (20,20))
-
-while jouer:
-    for events in pygame.event.get():
-        if events.type == QUIT:
-            jouer=False
-            quit()
-        elif events.type == pygame.KEYDOWN:
-            if events.key == pygame.K_RIGHT:
-                rect1.move_ip((2.5,0))
-            elif events.key == pygame.K_UP:
-                rect1.move_ip((0,-2.5))
-            elif events.key == pygame.K_LEFT:
-                rect1.move_ip((-2.5,0))
-            elif events.key == pygame.K_DOWN:
-                rect1.move_ip((0,2.5))
-                
-            
-    ecran.blit(fond, (2.5,2.5))
-    
-    ecran.blit(personnage_test, rect1)
-    
-    ecran.blit(foulard, (430, 200))
-    
-    pygame.display.flip()
-        
-        
-import pygame
-from pygame.locals import *
-pygame.init()
-
-ecran = pygame.display.set_mode((805,485))
-
-fond = pygame.image.load('photo map.jpg')
-
-fond = fond.convert()
-
-personnage_test = pygame.image.load('fred.png')
-
-personnage_test = pygame.transform.scale(personnage_test, (30,30))
-
-rect1 = personnage_test.get_rect()
-
-pygame.key.set_repeat(1,20)
-
-foulard = pygame.image.load('ImageDuBeret.png')
-
-foulard = pygame.transform.scale(foulard, (35,35))
-
-jouer = True
-
-ecran.blit(personnage_test, (20,20))
-
-while jouer:
-    for events in pygame.event.get():
-        if events.type == QUIT:
-            jouer=False
-            quit()
-        elif events.type == pygame.KEYDOWN:
-            if events.key == pygame.K_RIGHT:
-                rect1.move_ip((2.5,0))
-            elif events.key == pygame.K_UP:
-                rect1.move_ip((0,-2.5))
-            elif events.key == pygame.K_LEFT:
-                rect1.move_ip((-2.5,0))
-            elif events.key == pygame.K_DOWN:
-                rect1.move_ip((0,2.5))
-                
-            
-    ecran.blit(fond, (2.5,2.5))
-    
-    ecran.blit(personnage_test, rect1)
-    
-    ecran.blit(foulard, (430, 200))
-    
-    pygame.display.flip()
-        
-
-       
-
-
-
-       
-
-
-    
