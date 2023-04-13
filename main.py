@@ -19,13 +19,13 @@ def jeu_beret():
     
     screen = screen.convert()                                       # convertit l'image
     
-    screen.blit(image1, (0,0))                                                                           
+    screen.blit(image1, (0,0))                                      # affiche l'image
         
-    interface()
+    interface()                                                     # affiche l'interface
     
-    musique()
+    musique()                                                       # lance la musique
         
-    while True:
+    while True:                                                     # Permet de stopper le programme donc de mettre fin au jeu
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit ()
@@ -71,7 +71,7 @@ def temps():                                                                    
  
 
 def musique():                                                                      #création d'une fonction de musique qui se lance lors du lancement de la partie
-    pygame.mixer.music.load('')
+    pygame.mixer.music.load('muique pour projet NSI.ogg')
     pygame.mixer.music.play()
     Sound.play(loops=1, maxtime=0, fade_ms=0)
     
