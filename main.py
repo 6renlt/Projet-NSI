@@ -59,11 +59,10 @@ def jeu_beret():
                     personnage_test.move_ip((0,5))
                 
                 
-                print("après mouvement", perso_rect)
+                
             if labyrinthe_masque.overlap(perso_masque, perso_rect.topleft) != None:
-                print('collision')
                 perso_rect = ancienne_position
-                print("changement", perso_rect)
+                
             
     ecran.fill((255, 255, 255))
     ecran.blit(labyrinthe, (0,0))
