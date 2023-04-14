@@ -8,8 +8,9 @@ clock = pygame.time.Clock()
 current_time = 0
 
 longueur=800
-
 hauteur=465
+
+                                                                                                                                     
 
 def jeu_beret():                                                                     
         
