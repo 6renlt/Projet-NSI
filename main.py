@@ -15,13 +15,10 @@ hauteur=465
 def jeu_beret():                                                                     
         
     screen = pygame.display.set_mode((longueur, hauteur))           # charge la fenêtre de hauteur 465 et de longeur 800
-    
     image1 = pygame.image.load("map easy 1.jpg")                    # sert à importer une image (ici la map)
-    
     screen = screen.convert()                                       # convertit l'image
-    
     screen.blit(image1, (0,0))                                      # affiche l'image
-        
+    
     interface()                                                     # affiche l'interface
     
     musique()                                                       # lance la musique
@@ -82,6 +79,8 @@ def interface():                                                                
     label = police.render('Bienvenue dans ',True,(0,0,0))
     cran.blit(label,(0,0))     
     if event.key == pygame.K_SPACE:
+      
+      temps()
         
         
    
