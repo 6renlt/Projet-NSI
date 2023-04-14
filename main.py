@@ -11,19 +11,26 @@ longueur=800
 hauteur=465
 
 
-perso = pygame.image.load("Fred.png")
-perso = pygame.transform.scale(perso, (20,20))
 
 def jeu_beret():                                                                     
         
     screen = pygame.display.set_mode((longueur, hauteur))           # charge la fenêtre de hauteur 465 et de longeur 800
     
+        
+        
     labyrinthe = pygame.image.load("photo_map.png")                   # sert à importer une image (ici la map)
     labyrinthe_masque = pygame.mask.from_surface(labyrinthe)
-    
+        
+    perso = pygame.image.load("Fred.png")
+    perso = pygame.transform.scale(perso, (20,20))
+
+    perso_rect = pygame.Rect(10,10,20,20)
+    perso_masque = pygame.mask.from_surface(perso)
+
+
     screen = screen.convert()                                       # convertit l'image
-    screen.blit(image1, (0,0))                                      # affiche l'image
-    
+    screen.blit(image1, (0,0))                                      # affiche l'image    
+        
     interface()                                                     # affiche l'interface
     
     musique()                                                       # lance la musique
