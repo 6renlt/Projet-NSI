@@ -10,12 +10,17 @@ current_time = 0
 longueur=800
 hauteur=465
 
-                                                                                                                                     
+
+perso = pygame.image.load("Fred.png")
+perso = pygame.transform.scale(perso, (20,20))
 
 def jeu_beret():                                                                     
         
     screen = pygame.display.set_mode((longueur, hauteur))           # charge la fenêtre de hauteur 465 et de longeur 800
-    image1 = pygame.image.load("map easy 1.jpg")                    # sert à importer une image (ici la map)
+    
+    labyrinthe = pygame.image.load("photo_map.png")                   # sert à importer une image (ici la map)
+    labyrinthe_masque = pygame.mask.from_surface(labyrinthe)
+    
     screen = screen.convert()                                       # convertit l'image
     screen.blit(image1, (0,0))                                      # affiche l'image
     
@@ -29,18 +34,9 @@ def jeu_beret():
                 pygame.quit ()
             if event.type == pygame.KEYDOWN:
                 continuer = False 
-                
-        pygame.display.flip()
+         
         
-        
-
-def personnages():                                                              #sert a definir la taille du personnage et ses déplacements sur la map
-    
-    personnage_test = pygame.Rect((360,240), (32,32))
-    
-    pygame.key.set_repeat(1,20)
-        
-    while True:                                                                     # permet le déplacements du personnages dans differentes directions
+        pygame.key.set_repeat(1,20)
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
@@ -54,6 +50,14 @@ def personnages():                                                              
                     personnage_test.move_ip((-5,0))
                 elif event.key == pygame.K_DOWN:
                     personnage_test.move_ip((0,5))
+                
+        pygame.display.flip()
+        
+        
+
+
+        
+                                                                        # permet le déplacements du personnages dans differentes direct
     
 def temps():                                                                        # création d'un minuteur/chronomètre
     chrono = False
